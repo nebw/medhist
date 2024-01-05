@@ -1,0 +1,34 @@
+# @package _global_
+
+datamodule:
+  covariates: []
+  batch_size: 512
+  use_phecode_inputs: False
+  label_definition:
+    all_cause_death: False
+    phecodes: False
+    custom: '/sc-projects/sc-proj-ukb-cvd/results/projects/22_medical_records/data/220531/endpoints.csv'
+
+setup:
+  use_data_artifact_if_available: True
+  data_identifier: "WandBGraphDataNoShortcuts128:v0"
+  data:
+    min_record_counts: 50
+
+training:
+  gradient_checkpointing: False
+  binarize_records: True
+  optimizer_kwargs:
+    lr: 0.0006283170766103617
+    weight_decay: 0.3098128107457476
+
+model:
+  model_type: 'Identity'
+
+head:
+  dropout: 0.8459341826722063
+  kwargs:
+    num_hidden: 4096
+    num_layers: 1
+    initial_dropout: 0.1849767083477732
+    use_final_layer_bias: False

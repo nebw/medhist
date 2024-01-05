@@ -1,0 +1,26 @@
+defaults:
+  - alpha_scheduler: null
+
+exclusions_on_losses: False
+exclusions_on_metrics: True
+gradient_checkpointing: True
+contrastive_loss_factor: 0
+endpoint_loss_factor: 1
+vicreg_loss_factor: 0
+node_dropout: null
+normalize_node_embeddings: True
+binarize_records: True
+write_predictions: False
+write_embeddings: False
+write_attributions: False
+attribution_baseline_mode: 'zeros'
+use_endpoint_embeddings: False
+use_endpoint_embedding_head: False
+test_time_augmentation_steps: 1
+use_lr_scheduler: False
+record_weights_learnable: False
+patience: 5
+optimizer: 'Adam'
+optimizer_kwargs:
+  weight_decay: 5e-4
+  lr: 0.001

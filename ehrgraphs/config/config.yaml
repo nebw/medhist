@@ -1,0 +1,9 @@
+defaults:
+  - setup: full_noshortcuts
+  - head: mlp
+  - datamodule: tte
+  - model: gnn
+  - training: default
+  - trainer: default
+  - optional experiment: null
+  - _self_
